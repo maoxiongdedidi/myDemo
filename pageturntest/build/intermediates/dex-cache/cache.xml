@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\MyDemo\pageturntest\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="024349c868b06424b5de6ede1d5140f22663fd14">
+        <dex dex="E:\MyDemo\pageturntest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_7721105ff9a40b37849f7f7f3709a31d0e073e83\classes.dex" />
+    </item>
+    <item
+        jar="E:\MyDemo\pageturntest\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="3b97f162195473d0f8d0951b3fdf7bb59e7f919e">
+        <dex dex="E:\MyDemo\pageturntest\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7cdae4e0136ff090c529ffcc050fade9b73b25ea\classes.dex" />
+    </item>
+
+</items>

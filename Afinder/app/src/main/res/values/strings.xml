@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Afinder</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="input_file_name_cn">请输入要搜索的文件名</string>
+    <string name="open_file_err">打开搜索目录失败，请检查设置是否正确。</string>
+<string name="aboutauthor">关于作者</string>
+    <string name="aboutprogram">关于文件</string>
+    <string name="gotit">我知道了</string>
+    <string name="author">作者：xautstudent</string>
+	<string name="paragrap">段落个数：</string>
+	<string name="word">文字个数：</string>
+	<string name="tables">表格个数：</string>
+	<string name="pictures">图片个数：</string>
+</resources>

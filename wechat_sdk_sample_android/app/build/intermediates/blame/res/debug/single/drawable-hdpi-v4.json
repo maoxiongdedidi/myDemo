@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_music_thumb_backup.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\send_music_thumb_backup.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_off_normal.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\btn_check_off_normal.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_submenu_pressed.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\mm_submenu_pressed.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_music_thumb.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\send_music_thumb.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_trans.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\mm_trans.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_dialog_alert.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\ic_dialog_alert.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_dialog_long_click.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\ic_dialog_long_click.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_off_disable.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\btn_check_off_disable.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_img.jpg",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\send_img.jpg"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_on_normal.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\btn_check_on_normal.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_submenu_normal.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\mm_submenu_normal.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_on_disable.png",
+        "source": "E:\\MyDemo\\wechat_sdk_sample_android\\app\\src\\main\\res\\drawable-hdpi\\btn_check_on_disable.png"
+    }
+]

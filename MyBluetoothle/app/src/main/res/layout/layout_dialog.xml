@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+    android:orientation="vertical">
+<LinearLayout
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_dialog_upgrade_autolinearlayout">
+    <TextView
+        android:id="@+id/layout_dialog_textview"
+        android:layout_marginTop="40px"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#d7193c"
+        android:text="0%"
+        android:textSize="40px"/>
+
+    <ImageView
+        android:layout_marginLeft="30px"
+        android:layout_gravity="left"
+        android:layout_marginTop="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/upgrade_progress_bar_white"
+        android:id="@+id/layout_dialog_imageview"/>
+
+    <View
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"/>
+    <TextView
+        android:layout_marginTop="30px"
+        android:textColor="#171717"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="升级中，请稍后。。。"
+        android:gravity="center"/>
+</LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layout_dialog_over_autolinearlayout">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:src="@drawable/upgrade_complete_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#d7193c"
+            android:layout_marginTop="30px"
+            android:text="升级完成"
+            android:gravity="center"/>
+        <Button
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="50px"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="#d7193c"
+            android:textColor="#ffffff"
+            android:text="确定"
+            android:id="@+id/layout_dialog_over_button"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</FrameLayout>

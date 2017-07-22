@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filemp4.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\filemp4.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_bar_icon_normal.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\search_bar_icon_normal.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\listimag.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\listimag.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\exportdb.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\exportdb.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_bar_edit_pressed.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\search_bar_edit_pressed.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filepdf.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\filepdf.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dslab.jpg",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\dslab.jpg"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\importdb.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\importdb.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedoc.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\filedoc.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_bar_edit_selector.xml",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\search_bar_edit_selector.xml"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\emotionstore_progresscancelbtn.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\emotionstore_progresscancelbtn.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_bar_edit_normal.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\search_bar_edit_normal.png"
+    },
+    {
+        "merged": "E:\\MyDemo\\Afinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\MyDemo\\Afinder\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    }
+]

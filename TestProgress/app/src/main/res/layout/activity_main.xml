@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.doohan.testprogress.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:text="start"
+        />
+    <com.doohan.testprogress.ColorArcProgressBar
+        android:layout_marginLeft="10px"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bar3"
+        android:layout_marginBottom="150dp"
+
+        app:front_color1="#ff0000"
+        app:front_color2="#ffff00"
+        app:front_color3="#00ff00"
+        app:max_value="100"
+        app:is_need_content="true"
+        app:is_need_unit="true"
+        app:string_unit="剩余电量"
+
+
+        app:back_color="@android:color/darker_gray"/>
+      <!--  -->
+
+
+</LinearLayout>

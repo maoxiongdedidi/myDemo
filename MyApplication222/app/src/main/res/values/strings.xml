@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyExplorer</string>
+
+    <string name="explorer">Explorer</string>
+
+    <string name="dialog_read_from_dir">Open from dir</string>
+</resources>
