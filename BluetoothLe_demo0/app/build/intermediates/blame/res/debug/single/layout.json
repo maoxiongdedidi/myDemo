@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\workingspace\\BluetoothLe_demo0\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "E:\\workingspace\\BluetoothLe_demo0\\app\\src\\main\\res\\layout\\listitem_device.xml"
+    },
+    {
+        "merged": "E:\\workingspace\\BluetoothLe_demo0\\app\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
+        "source": "E:\\workingspace\\BluetoothLe_demo0\\app\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
+    },
+    {
+        "merged": "E:\\workingspace\\BluetoothLe_demo0\\app\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
+        "source": "E:\\workingspace\\BluetoothLe_demo0\\app\\src\\main\\res\\layout\\gatt_services_characteristics.xml"
+    }
+]

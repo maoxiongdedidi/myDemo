@@ -3,6 +3,7 @@ package com.doohan.mybluetoothle.FileGuanLi;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
@@ -43,6 +44,9 @@ public class MyFileActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         setContentView(R.layout.activity_main_my);
         //显示文件列表
         showFileDir(ROOT_PATH);
@@ -57,7 +61,7 @@ public class MyFileActivity extends ListActivity {
         mFilePath = new ArrayList<String>();
         File file = new File(path);
 
-        File[] files = file.listFiles();
+         File[] files = file.listFiles();
         //如果当前目录不是根目录
         if (!ROOT_PATH.equals(path)) {
             mFileName.add("@1");

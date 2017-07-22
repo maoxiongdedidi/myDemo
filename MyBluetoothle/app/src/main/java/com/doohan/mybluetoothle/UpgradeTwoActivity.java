@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -196,6 +197,9 @@ public class UpgradeTwoActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         setContentView(R.layout.gatt_services_characteristics);
         //makeActionOverflowMenuShown();
         final Intent intent = getIntent();
@@ -480,6 +484,10 @@ public class UpgradeTwoActivity extends Activity {
                     Log.e("----",serialNumber+"");
                     if (serialNumber >= 0 && serialNumber < 10) {
                         // mInstance.send("FFCC00040101010301D5");//
+                        //重新传输需要从0开始
+                        serialNumber=0;
+                        stopcount=0;
+
                         if(mp3OrFirmware==1){
                             mBluetoothLeService.writeLlsAlertLevel(2, getHexBytes("FFCC00040101010101D3"));
                         }else{
@@ -492,6 +500,9 @@ public class UpgradeTwoActivity extends Activity {
                     mHandler.postDelayed(mRunnable3, 5000);//再次开启续传监听
                 } else if (substring3.equals("27")) {
                     // mInstance.send("FFCC00040101010301D5");//格式化flash之后创建音乐文件命令
+                    //重新传输需要从0开始
+                    serialNumber=0;
+                    stopcount=0;
                     if(mp3OrFirmware==1){
                         mBluetoothLeService.writeLlsAlertLevel(2, getHexBytes("FFCC00040101010101D3"));
                     }else{
@@ -839,6 +850,7 @@ public class UpgradeTwoActivity extends Activity {
      * 弹出升级的dialog
      */
     public void getDialog() {
+
         LayoutInflater inflater = LayoutInflater.from(this);
         View layout = inflater.inflate(R.layout.layout_dialog, null);
         dialog = new android.support.v7.app.AlertDialog.Builder(this).create();
