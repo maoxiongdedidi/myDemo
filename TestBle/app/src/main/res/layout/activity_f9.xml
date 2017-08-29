@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ding.testble.F9Activity">
+
+
+        <Button
+            android:id="@+id/f9_empty_mileage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:text="里程清空"/>
+
+        <Button
+            android:id="@+id/f9_setting_mileage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="里程设置"/>
+
+
+
+
+        <Button
+            android:id="@+id/f9_close_light"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="关闭自动大灯"/>
+
+        <Button
+            android:id="@+id/f9_open_light"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="开启自动大灯"/>
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ding.testble.MainActivity">
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/button"
+       android:text="开启服务"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+     <Button
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="50dp"
+         android:id="@+id/jinru"
+         android:text="状态切换与灯光控制"/>
+
+  </LinearLayout>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/tuichu"
+       android:text="上传编号"/>
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/ef_button"
+       android:text="获取车身锁状态"/>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/f8_button"
+       android:text="上传时间"/>
+
+
+        <Button
+            android:id="@+id/empty_mileage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="里程和自动大灯设置"/>
+
+    <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/file_upgrade"
+       android:text="固件升级"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/music_upgrade"
+        android:text="音乐升级"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+         android:textColor="#7f8388"
+          android:textSize="32px"
+          android:text="蓝牙连接状态："/>
+      <TextView
+          android:textColor="#7f8388"
+          android:textSize="32px"
+
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:id="@+id/ble_state"/>
+   </LinearLayout>
+
+</LinearLayout>

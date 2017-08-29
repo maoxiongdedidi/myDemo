@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+
+        android:layout_marginTop="54px"
+        android:textSize="36px"
+        android:textColor="#000000"
+        android:text="设置开关灯光感值"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+
+        android:layout_marginTop="40px"
+        android:textSize="36px"
+        android:textColor="#7f8388"
+        android:text="开灯光感值"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/open_sensation"
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:maxHeight="8px"
+            android:minHeight="8px"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:max="100"
+            android:progressDrawable="@drawable/seek_drawable"
+            android:thumb="@drawable/seek_thumb"/>
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_marginTop="10px"
+        android:textSize="36px"
+        android:textColor="#7f8388"
+        android:text="关灯光感值"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/close_sensation"
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:maxHeight="8px"
+            android:minHeight="8px"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:max="100"
+            android:progressDrawable="@drawable/seek_drawable"
+            android:thumb="@drawable/seek_thumb"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="86px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:orientation="horizontal"
+        android:layout_marginBottom="22px"
+        android:gravity="center">
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="32px"
+            android:id="@+id/cancle"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/nimei"
+            android:textColor="#d7193c"
+            android:text="取消"
+            />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="32px"
+            android:id="@+id/agress"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selectxiao"
+            android:layout_marginLeft="46px"
+            android:text="设置"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
