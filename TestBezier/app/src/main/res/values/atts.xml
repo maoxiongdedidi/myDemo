@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BatteryView">
+        <attr name="battery_width" format="integer"/>
+        <attr name="battery_height" format="integer"/>
+        <attr name="battery_left" format="integer"/>
+        <attr name="battery_top" format="integer"/>
+        <attr name="battery_head_width" format="integer"/>
+        <attr name="battery_head_height" format="integer"/>
+        <attr name="battery_inside_margin" format="integer"/>
+    </declare-styleable>
+
+
+
+
+</resources>
