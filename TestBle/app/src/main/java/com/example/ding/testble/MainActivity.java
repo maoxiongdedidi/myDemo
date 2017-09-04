@@ -5,12 +5,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,12 +21,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.ding.testble.agreementholp.E0Holper;
-import com.example.ding.testble.agreementholp.F1Holper;
-import com.example.ding.testble.agreementholp.F3Holper;
 import com.example.ding.testble.agreementholp.F8Holper;
-import com.example.ding.testble.agreementholp.F9Holper;
 import com.example.ding.testble.agreementholp.OneEHolper;
 import com.example.ding.testble.agreementholp.UpgradeHolper;
 import java.io.ByteArrayOutputStream;
@@ -66,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         setContentView(R.layout.activity_main);
         initView();
         MyApplication.sMainActivity=this;
@@ -90,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         Intent intent = new Intent(MainActivity.this,BleService.class);
         stopService(intent);
         BleAndLockState.BLEADRESS="";
+        BleAndLockState.type=0;
+
+
+
+
     }
 
     private void initView() {
@@ -131,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         mTuiChu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                shangchuanbianhao();//1表示固件升级，2表示音乐文件升级
+                shangchuanbianhao();
             }
         });
 
@@ -160,55 +163,40 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
                 });
             }
         });
-
-
         mFileUpgrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(BleAndLockState.type!=1){
-                    BleAndLockState.type=1;
+                BleAndLockState.type=1;
+                if(TextUtils.isEmpty(BleAndLockState.bin_adress)){
                     Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
                     MainActivity.this.startActivityForResult(intent1,100);
                 }else{
-                    if(TextUtils.isEmpty(BleAndLockState.bin_adress)){
-                        Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                        MainActivity.this.startActivityForResult(intent1,100);
-                    }else{
-                        if(DataVerificationUtil.is_null(mBinBytes)){
-                            mBinBytes=null;
-                            mBinBytes=getbyte( BleAndLockState.bin_adress);
-                        }else {
-                            mBinBytes=getbyte( BleAndLockState.bin_adress);
-                        }
-                        upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
-                        upgradeHolper.startUpgrade();
-                    }
+                    mBinBytes=null;
+                    mBinBytes=getbyte( BleAndLockState.bin_adress);
+                    upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
+                    upgradeHolper.startUpgrade();
                 }
-
             }
         });
         mMusicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(BleAndLockState.type!=2){
-                    BleAndLockState.type=2;
+
+                BleAndLockState.type=2;
+                if(TextUtils.isEmpty(BleAndLockState.mp3_adress)){
                     Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
                     MainActivity.this.startActivityForResult(intent1,200);
                 }else{
-                    if(TextUtils.isEmpty(BleAndLockState.mp3_adress)){
-                        Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                        MainActivity.this.startActivityForResult(intent1,100);
-                    }else{
-                        if(DataVerificationUtil.is_null(mBinBytes)){
-                            mBinBytes=null;
-                            mBinBytes=getbyte( BleAndLockState.mp3_adress);
-                        }else {
-                            mBinBytes=getbyte( BleAndLockState.mp3_adress);
-                        }
-                        upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
-                        upgradeHolper.startUpgrade();
-                    }
+                    mBinBytes=null;
+                    mBinBytes=getbyte( BleAndLockState.mp3_adress);
+                    upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
+                    upgradeHolper.startUpgrade();
                 }
+
+
+
+
+
             }
         });
 
@@ -229,12 +217,8 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         if(resultCode==RESULT_OK&&requestCode==100){
           BleAndLockState.bin_adress = data.getStringExtra("data");
             if(!TextUtils.isEmpty(BleAndLockState.bin_adress)){
-                if(DataVerificationUtil.is_null(mBinBytes)){
                     mBinBytes=null;
                     mBinBytes=getbyte( BleAndLockState.bin_adress);
-                }else {
-                    mBinBytes=getbyte( BleAndLockState.bin_adress);
-                }
                 upgradeHolper = new UpgradeHolper(mBinBytes, this, this);
                 upgradeHolper.startUpgrade();
             }
@@ -254,12 +238,10 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         }else if(resultCode==RESULT_OK&&requestCode==200){
             BleAndLockState.mp3_adress = data.getStringExtra("data");
             if(!TextUtils.isEmpty(BleAndLockState.mp3_adress)){
-                if(DataVerificationUtil.is_null(mBinBytes)){
+
                     mBinBytes=null;
                     mBinBytes=getbyte( BleAndLockState.mp3_adress);
-                }else {
-                    mBinBytes=getbyte( BleAndLockState.mp3_adress);
-                }
+
                 upgradeHolper = new UpgradeHolper(mBinBytes, this, this);
                 upgradeHolper.startUpgrade();
             }
@@ -297,11 +279,12 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         mAgainALL.setVisibility(View.GONE);
         mUpgradeResult.setText("升级成功");
         dialog.setCanceledOnTouchOutside(true);
-        BleAndLockState.BLEADRESS="";
+       //  BleAndLockState.BLEADRESS="";
     }
 
     @Override
     public void defeated() {
+        upgradeHolper.endUpgrade();
         mUpgradeALL.setVisibility(View.GONE);
         mOverALL.setVisibility(View.GONE);
         mAgainALL.setVisibility(View.VISIBLE);
@@ -353,6 +336,9 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         dialog.setContentView(layout);
         dialog.setCanceledOnTouchOutside(false); //设置点击外部dialog不消失
         dialog.show();
+
+
+
         mFinishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -368,36 +354,29 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         mAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try{
-                    if(mBinBytes.length>0){
-                        if(upgradeHolper!=null){
-                            upgradeHolper.flag=0;
-                            upgradeHolper.sendOrder=1;
-                            upgradeHolper.isHopeful=1;
-                            upgradeHolper.startUpgrade();
-                        }else{
-                            upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
-                            upgradeHolper.startUpgrade();
-                        }
-                    }else{
-                        if(BleAndLockState.type==1){
-                            Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                            MainActivity.this.startActivityForResult(intent1,100);
-                        }else if(BleAndLockState.type==2){
-                            Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                            MainActivity.this.startActivityForResult(intent1,200);
-                        }
+               if(BleAndLockState.type==1){
+                   if(TextUtils.isEmpty(BleAndLockState.bin_adress)){
+                       Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
+                       MainActivity.this.startActivityForResult(intent1,100);
+                   }else{
+                       mBinBytes=null;
+                       mBinBytes=getbyte( BleAndLockState.bin_adress);
+                       upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
+                       upgradeHolper.startUpgrade();
+                   }
 
-                    }
-                }catch (Exception e){
-                    if(BleAndLockState.type==1){
-                        Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                        MainActivity.this.startActivityForResult(intent1,100);
-                    }else if(BleAndLockState.type==2){
-                        Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
-                        MainActivity.this.startActivityForResult(intent1,200);
-                    }
-                }
+               }else if(BleAndLockState.type==2){
+                   if(TextUtils.isEmpty(BleAndLockState.mp3_adress)){
+                       Intent intent1 = new Intent(MainActivity.this, MyFileActivity.class);
+                       MainActivity.this.startActivityForResult(intent1,200);
+                   }else{
+                       mBinBytes=null;
+                       mBinBytes=getbyte( BleAndLockState.mp3_adress);
+                       upgradeHolper = new UpgradeHolper(mBinBytes, MainActivity.this, MainActivity.this);
+                       upgradeHolper.startUpgrade();
+                   }
+               }
+
             }
         });
     }
@@ -481,9 +460,6 @@ public byte[] getbyte(String data1){
             outSteam.write(buffer, 0, len);
         }
         mBytes = outSteam.toByteArray();
-
-               /* mBytes[34]=0;
-                mBytes[35]=0;*/
         byte[] jiaoyan = DataTreatingUtils.jiaoyan(mBytes);
         int i = DataTreatingUtils.byte2int(jiaoyan);
         outSteam.close();
@@ -495,10 +471,6 @@ public byte[] getbyte(String data1){
     }
 
 }
-
-
-
-
 
 
 
@@ -527,6 +499,10 @@ public byte[] getbyte(String data1){
                 mMusicButton.setEnabled(false);
                 mF9Button.setEnabled(false);
                 mBleState.setText("蓝牙未连接");
+                if(dialog!=null){
+                    dialog.dismiss();
+                    dialog=null;
+                }
             }
         }
     };
@@ -550,4 +526,9 @@ public byte[] getbyte(String data1){
             }
         }
     };
+
+
+
+
+
 }

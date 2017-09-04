@@ -73,6 +73,14 @@ public class UpgradeHolper {
         }
         upgradeData();
     }
+    public void endUpgrade(){
+        try{
+            mContext.unregisterReceiver(upgradeBackAction);
+        }catch (Exception e){
+            ToastUtil.showShortToast("取消升级返回广播异常"+e.getClass().getName());
+        }
+
+    }
 
     Runnable mSecondHandshakeRunnable = new Runnable() {
         @Override
@@ -127,7 +135,6 @@ public class UpgradeHolper {
                 byte[] checkNum3 = DataTreatingUtils.jiaoyan(DataTreatingUtils.byteMerger(aaa,map.get(packetOrder)));
                 byte[] allData3=DataTreatingUtils.byteMerger(DataTreatingUtils.byteMerger(aaa,map.get(packetOrder)),checkNum3);
                 isHopeful=35;
-
                 BleService.send(allData3);
                 Log.e("=======发送的信息", Arrays.toString(allData3));
                 if(arbitrarily>255){
@@ -143,7 +150,6 @@ public class UpgradeHolper {
                 ble_packetHeader.getByteBuffer().get(bytes4);
                 byte[] jiaoyan = DataTreatingUtils.jiaoyan(bytes4);
                 byte[] alldata = DataTreatingUtils.byteMerger(bytes4, jiaoyan);
-
                 BleService.send(alldata);
                 isHopeful=36;
                 break;
@@ -207,8 +213,6 @@ public class UpgradeHolper {
                             }else{
                                 sendOrder=3;
                                 upgradeData();
-
-                                // mHandler.post(mRunnableFileContent);
                             }
                         }else if(isRevOK==2){
                             sendOrder=1;
@@ -240,10 +244,6 @@ public class UpgradeHolper {
         void endUpgrade();
         void defeated();
     }
-
-
-
-
 
 
 
