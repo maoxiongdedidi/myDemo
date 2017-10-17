@@ -20,6 +20,7 @@ public class F1AndF3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f1);
+        ScreenManager.getScreenManager().pushActivity(this);
         initView();
         initData();
     }

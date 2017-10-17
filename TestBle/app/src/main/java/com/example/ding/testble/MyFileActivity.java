@@ -34,10 +34,12 @@ public class MyFileActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         setContentView(R.layout.activity_main_my);
+        ScreenManager.getScreenManager().pushActivity(this);
         //显示文件列表
         showFileDir(ROOT_PATH);
     }

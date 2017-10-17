@@ -10,7 +10,10 @@ import java.util.UUID;
  * Created by ding on 2016/11/1.
  */
 public class Constant {
+    public static  String username;
+    public static String password;
     public static int VCUVERSION=1;
+    public static final String LOGIN="http://webadmin.doohan.com.cn/admin/adminapp/check.json";
     /**
      * 所有固定值
      */

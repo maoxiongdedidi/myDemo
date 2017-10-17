@@ -23,8 +23,9 @@ public class WeChatCaptureActivity extends BaseCaptureActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_we_chat_capture);
 
+        setContentView(R.layout.activity_we_chat_capture);
+        ScreenManager.getScreenManager().pushActivity(this);
         surfaceView = (SurfaceView) findViewById(R.id.preview_view);
         autoScannerView = (AutoScannerView) findViewById(R.id.autoscanner_view);
     }

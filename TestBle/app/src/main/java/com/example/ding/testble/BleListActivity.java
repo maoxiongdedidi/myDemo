@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,11 +44,12 @@ public class BleListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         setContentView(R.layout.activity_ble_list);
-
+        ScreenManager.getScreenManager().pushActivity(this);
         mHandler = new Handler();
 
         // 检查当前手机是否支持ble 蓝牙,如果不支持退出程序
@@ -72,6 +74,20 @@ public class BleListActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        ArrayList<String> list = new ArrayList<>();
+        //list.add("865029031922407");
+        // TODO: 2017/9/15 添加手机IMEI值，配对之后才能使用此app
+
+        TelephonyManager TelephonyMgr = (TelephonyManager)getSystemService(TELEPHONY_SERVICE);
+        String szImei = TelephonyMgr.getDeviceId();
+      /* if(!list.contains(szImei)){
+            finish();
+        }*/
+
+
+
+
 
         // 为了确保设备上蓝牙能使用, 如果当前蓝牙设备没启用,弹出对话框向用户要求授予权限来启用
         if (!mBluetoothAdapter.isEnabled()) {

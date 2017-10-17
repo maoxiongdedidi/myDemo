@@ -28,7 +28,8 @@ import com.example.ding.testble.agreementholp.UpgradeHolper;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.ArrayList;
+
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements UpgradeHolper.NewUpgradeCallBack{
     private Dialog dialog;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         setContentView(R.layout.activity_main);
+        ScreenManager.getScreenManager().pushActivity(this);
+        ButterKnife.bind(this);
         initView();
         MyApplication.sMainActivity=this;
         IntentFilter filter = new IntentFilter();
@@ -289,7 +292,9 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         mOverALL.setVisibility(View.GONE);
         mAgainALL.setVisibility(View.VISIBLE);
         mUpgradeResult.setText("升级失败");
-        dialog.setCanceledOnTouchOutside(true);
+        if(dialog!=null){
+            dialog.setCanceledOnTouchOutside(true);
+        }
     }
 
 
@@ -304,10 +309,6 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         image.setAnimation(animation);
         image.startAnimation(animation);
     }
-
-
-
-
 
     /**
      * 弹出升级的dialog
@@ -336,9 +337,6 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         dialog.setContentView(layout);
         dialog.setCanceledOnTouchOutside(false); //设置点击外部dialog不消失
         dialog.show();
-
-
-
         mFinishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -380,10 +378,6 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
             }
         });
     }
-
-
-
-
 
     /**
      * 弹出上传编号的dialog
@@ -526,8 +520,6 @@ public byte[] getbyte(String data1){
             }
         }
     };
-
-
 
 
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/login_autoRelativeLayout"
+    tools:context=".LoginActivity">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="蓝牙测试工具"/>
+
+    <EditText
+
+        android:id="@+id/phone_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="54px"
+        android:layout_marginRight="54px"
+        android:drawablePadding="15dp"
+        android:hint="请输入账号"
+        android:textSize="28px"
+        android:background="@null"
+        android:textCursorDrawable="@null"
+
+        />
+    <View
+        android:layout_marginRight="54px"
+        android:layout_below="@id/phone_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#7f8388"
+        android:layout_marginLeft="54px"
+        />
+    <EditText
+        android:layout_marginRight="54px"
+        android:id="@+id/password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@id/phone_edittext"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="15dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="28px"
+        android:background="@null"
+        android:layout_marginLeft="54px"
+        android:textCursorDrawable="@null"
+        android:maxLength="12"
+        />
+<View
+    android:layout_below="@id/password_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="#7f8388"
+    android:layout_marginLeft="54px"
+    android:layout_marginRight="54px"
+    />
+    <Button
+        android:layout_marginLeft="54px"
+        android:layout_marginRight="54px"
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_below="@id/password_edittext"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/selectxiao"
+        android:textSize="32px"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="登录"/>
+
+</LinearLayout>
