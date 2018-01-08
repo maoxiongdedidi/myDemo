@@ -67,7 +67,7 @@ public class BluetoothInterface {
                 //蓝牙服务初始化没有成功关闭页面
                 mActivity.finish();
             }
-            mBluetoothLeService.connect(devicesAddress);
+            mBluetoothLeService.connect(BleAndLockState.BLEADRESS);
         }
 
         @Override

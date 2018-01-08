@@ -26,12 +26,14 @@
 
   </LinearLayout>
    <Button
+       android:visibility="gone"
        android:layout_width="match_parent"
        android:layout_height="50dp"
        android:id="@+id/tuichu"
        android:text="上传编号"/>
 
    <Button
+       android:visibility="gone"
        android:layout_width="match_parent"
        android:layout_height="50dp"
        android:id="@+id/ef_button"
@@ -44,17 +46,20 @@
 
 
         <Button
+
             android:id="@+id/empty_mileage"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="里程和自动大灯设置"/>
 
     <Button
+        android:visibility="gone"
        android:layout_width="match_parent"
        android:layout_height="50dp"
        android:id="@+id/file_upgrade"
        android:text="固件升级"/>
     <Button
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/music_upgrade"

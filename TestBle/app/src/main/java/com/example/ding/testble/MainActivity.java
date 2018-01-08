@@ -29,7 +29,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
-import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements UpgradeHolper.NewUpgradeCallBack{
     private Dialog dialog;
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements UpgradeHolper.New
         }
         setContentView(R.layout.activity_main);
         ScreenManager.getScreenManager().pushActivity(this);
-        ButterKnife.bind(this);
+
         initView();
         MyApplication.sMainActivity=this;
         IntentFilter filter = new IntentFilter();
